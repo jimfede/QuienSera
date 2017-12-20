@@ -1,0 +1,82 @@
+﻿@model QuienSera.Models.Funcionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sector.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sector.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Padron)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Padron)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Regimen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regimen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FotoGIUD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FotoGIUD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FuncionarioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

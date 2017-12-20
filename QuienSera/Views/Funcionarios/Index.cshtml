@@ -1,0 +1,75 @@
+﻿@model IEnumerable<QuienSera.Models.Funcionario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Sector.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Padron)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Regimen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FotoGIUD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sector.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Padron)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Regimen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FotoGIUD)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FuncionarioID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FuncionarioID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FuncionarioID })
+        </td>
+    </tr>
+}
+
+</table>
